@@ -1,7 +1,7 @@
 Capybara.default_driver = :selenium
 # Capybara.default_driver = :poltergeist
 
-Capybara.app_host = "http://search-coursera-jhu.herokuapp.com/"
+Capybara.app_host = "http://localhost:3000/"
 
 describe "Coursera App" do
 
@@ -21,9 +21,9 @@ describe "Coursera App" do
     end
   end
 
-  it "displays 'The Meat We Eat' when looking_for=diet" do
+  it "displays 'Weight Management' when looking_for=diet" do
     visit "?looking_for=diet"
-    expect(page).to have_content 'The Meat We Eat'  	
+    expect(page).to have_content 'Weight Management'  	
   end
 
 end
